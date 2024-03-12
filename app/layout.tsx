@@ -1,3 +1,5 @@
+import "@/app/ui/global.css"
+
 export default function RootLayout({
   children,
 }: {
@@ -9,3 +11,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+// EL LAYOUT ES EL MEJOR LUGAR PARA CARGAR ESTILOS GLOBALES
