@@ -10,6 +10,17 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
+export async function fetchCharacters () {
+  try {
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    const res = await fetch("https://rickandmortyapi.com/api/character")
+    const json = await res.json()
+    return json.results
+  } catch (error) {
+    return "There are no Characters"
+  }
+}
+
 export async function fetchRevenue() {
   // Add noStore() here to prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
